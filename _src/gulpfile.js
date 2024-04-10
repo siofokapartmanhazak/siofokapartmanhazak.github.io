@@ -73,19 +73,14 @@ function js() {
 
 function _watch() {
     livereload.listen({ basePath: 'dist' })
-    watch(['html/**/*.html', 'html/data.json', 'js/inline/*.js'], html)
+    watch(['html/**/*.html', 'html/data.json', 'js/inline/*.js'], htmlHU)
+    watch(['html/**/*.html', 'html/data.json', 'js/inline/*.js'], htmlEN)
     watch('css/**/*.css', css)
     watch(['js/**/*.js', '!js/inline/*.js'], js)
     watch('static/**/*.*', static)
     // watch('manifest.json', manifest)
     // watch('sw.js', sw)
 }
-
-function html(){
-    htmlHU()
-    htmlEN()
-}
-
 
 exports.htmlHU = htmlHU;
 exports.htmlEN = htmlEN;

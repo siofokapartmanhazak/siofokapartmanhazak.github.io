@@ -2,6 +2,11 @@ html, body {
     font-family: sans-serif;
 }
 
+img {
+    display: block;
+    max-width: 100%;
+}
+
 .block-container {
     max-width: min(calc(100% - 2rem), 960px);
     margin: 0 auto;

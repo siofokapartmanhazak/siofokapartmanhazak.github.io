@@ -38,7 +38,7 @@ function consolidateGalleryFileNames(path){
 
                     const fullPathNew = galleryImg.path + "/" + String(i).padStart(2,"0") + "." + fileExt
                     console.log(fullPathOriginal, fullPathNew)
-                    fs.renameSync(fullPathOriginal, fullPathOriginal)
+                    fs.renameSync(fullPathOriginal, fullPathNew)
 
                 }
             }else{

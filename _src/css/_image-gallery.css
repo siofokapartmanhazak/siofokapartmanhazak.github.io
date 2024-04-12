@@ -1,0 +1,20 @@
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-auto-rows: minmax(30px, auto);
+    gap: 1rem;
+}
+
+.image-gallery img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.image-gallery a {
+    display: block;
+}
+
+.intro-and-floor-plan {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+}

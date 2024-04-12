@@ -61,13 +61,19 @@ function makeThumbnails(path){
             const split = _file_path.split(".")
             const extension = split.pop() 
             const entryPathWithoutExtension = split.join(".") 
-            const _new_file_path = entryPathWithoutExtension + "-thumb-960" + "." + extension 
-            console.log(_new_file_path)
-            // sharp(_file_path)
-            // .resize(960, 540, {withoutEnlargement:true})
-            // .toFile(_new_file_path)
-            // //   .then( data => {console.log(data)})
-            // .catch( err => {console.error(err)});
+            const _new_file_path_L = entryPathWithoutExtension + "-thumb-960" + "." + extension 
+            const _new_file_path_S = entryPathWithoutExtension + "-thumb-480" + "." + extension 
+            sharp(_file_path)
+            .resize(960, 540, {withoutEnlargement:true})
+            .toFile(_new_file_path_L)
+            //   .then( data => {console.log(data)})
+            .catch( err => {console.error(err)});
+
+            sharp(_file_path)
+            .resize(480, 270, {withoutEnlargement:true})
+            .toFile(_new_file_path_S)
+            //   .then( data => {console.log(data)})
+            .catch( err => {console.error(err)});
         }
     }
 }

@@ -49,6 +49,32 @@ function consolidateGalleryFileNames(path){
 }
 // consolidateGalleryFileNames(CWD + "/static/img")
 
+function lowercaseExtensions(path){
+    const entries = fs.readdirSync(path, {withFileTypes:true})
+    for(const entry of entries){
+        if(entry.isDirectory()){
+            lowercaseExtensions(path + "/" + entry.name)
+        }
+        else{
+            const _file_path = entry.path + "/" + entry.name
+            const split = _file_path.split(".")
+            const extension = split.pop() 
+            const entryPathWithoutExtension = split.join(".") 
+            const lowercaseExtension = extension.toLowerCase()
+            const _new_file_path = entryPathWithoutExtension + "." + lowercaseExtension
+            if(_new_file_path != _file_path) {
+                console.log(_new_file_path, _file_path)
+                fs.renameSync(_file_path, _new_file_path)
+            }else{
+                console.log(_new_file_path, _file_path)
+            } 
+        }
+    }
+}
+
+// lowercaseExtensions(CWD + "/static/img")
+
+
 
 function makeThumbnails(path){
     const entries = fs.readdirSync(path, {withFileTypes:true})
@@ -64,13 +90,13 @@ function makeThumbnails(path){
             const _new_file_path_L = entryPathWithoutExtension + "-thumb-960" + "." + extension 
             const _new_file_path_S = entryPathWithoutExtension + "-thumb-480" + "." + extension 
             sharp(_file_path)
-            .resize(960, 540, {withoutEnlargement:true})
+            .resize(960, null, {withoutEnlargement:true})
             .toFile(_new_file_path_L)
             //   .then( data => {console.log(data)})
             .catch( err => {console.error(err)});
 
             sharp(_file_path)
-            .resize(480, 270, {withoutEnlargement:true})
+            .resize(480, null, {withoutEnlargement:true})
             .toFile(_new_file_path_S)
             //   .then( data => {console.log(data)})
             .catch( err => {console.error(err)});

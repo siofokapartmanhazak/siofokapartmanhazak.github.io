@@ -1,7 +1,7 @@
 <div data-gallery="true" class="image-gallery">
     {% for i in range(0, gallerycount) %}
     <a href="{{gallerypath}}{{(i | string).padStart(2, '0')}}.jpg">
-        <img src="{{gallerypath}}{{(i | string).padStart(2, '0')}}-thumb-960.jpg" alt="kép galéria">
+        <img loading="lazy" src="{{gallerypath}}{{(i | string).padStart(2, '0')}}-thumb-960.jpg" alt="kép galéria">
     </a>
     {% endfor %}
 </div>

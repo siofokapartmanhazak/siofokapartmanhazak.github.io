@@ -27,10 +27,10 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
                 <a href="/static/img/house-dali/apartman-bezs/hero-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-bezs/hero.jpg" alt="bézs apartman">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-bezs/hero.jpg" alt="bézs apartman">
                 </a>
                 <a href="/static/img/house-dali/apartman-bezs/floorplan-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-bezs/floorplan.jpg" alt="alaprajz">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-bezs/floorplan.jpg" alt="alaprajz">
                 </a>
             </div>
         </section>
@@ -44,10 +44,10 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
                 <a href="/static/img/house-dali/apartman-lila/hero-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-lila/hero.jpg" alt="lila apartman">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-lila/hero.jpg" alt="lila apartman">
                 </a>
                 <a href="/static/img/house-dali/apartman-lila/floorplan-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-lila/floorplan.jpg" alt="alaprajz">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-lila/floorplan.jpg" alt="alaprajz">
                 </a>
             </div>
         </section>
@@ -61,10 +61,10 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
                 <a href="/static/img/house-dali/apartman-piros/hero-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-piros/hero.jpg" alt="piros apartman">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-piros/hero.jpg" alt="piros apartman">
                 </a>
                 <a href="/static/img/house-dali/apartman-piros/floorplan-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-piros/floorplan.jpg" alt="alaprajz">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-piros/floorplan.jpg" alt="alaprajz">
                 </a>
             </div>
         </section>
@@ -78,16 +78,67 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
                 <a href="/static/img/house-dali/apartman-zold/hero-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-zold/hero.jpg" alt="zöld apartman">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-zold/hero.jpg" alt="zöld apartman">
                 </a>
                 <a href="/static/img/house-dali/apartman-zold/floorplan-thumb-960.jpg">
-                    <img src="/static/img/house-dali/apartman-zold/floorplan.jpg" alt="alaprajz">
+                    <img loading="lazy" src="/static/img/house-dali/apartman-zold/floorplan.jpg" alt="alaprajz">
                 </a>
             </div>
         </section>
         <section>
             {% set gallerypath="/static/img/house-dali/apartman-zold/gallery/" %}
             {% set gallerycount=19 %}
+            {% include 'html/tpl/gallery.html' %}
+        </section>
+    </div>
+
+    <div class="house">
+        <h2 id="house-dali">Miro ház</h2>
+        <img class="house-hero-img" src="/static/img/house-miro/exterior-thumb-960.jpg" alt="Miro ház">
+        <div class="house-text-01">150 méterre a szabadstrandtól</div>
+        <p>Üdülőháznak épült, modern épület klasszikus részletekkel ötvözve. Két szintes ház, melyben a két szomszédos, apartman egymás tükörképeként lettek kialakítva, külön bejárattal. Az építész külön ügyellt arra, hogy a vendégek egymást ne zavarják a pihenésben.  Továbbá figyelmet fordítottunk a tágas nappalira, ahol a családok kényelmesen étkezhetnek, vagy társasjátékozhatnak, tévézhetnek a síkképernyős okos TV-ken.</p>
+        <ul>
+            <li>parkolás zárt kertben</li>
+            <li>Wifi</li>
+            <li>Kerti sütőgető lehetőség</li>
+            <li>Homokozó a kicsiknek</li>
+            <li>Tágas apartmanok</li>
+            <li>Apartmanok már 35000- forint / éjszakától</li>
+        </ul>
+
+Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here" href="mailto:apartmanhazaksiofok@gmail.com">Kattintson ide.</a>.
+
+        <h3>MIRO HÁZ - Kék apartman</h3>
+        <section>
+            <div data-gallery="true" class="intro-and-floor-plan image-gallery">
+                <a href="/static/img/house-miro/apartman-kek/hero-thumb-960.jpg">
+                    <img loading="lazy" src="/static/img/house-miro/apartman-kek/hero.jpg" alt="kék apartman">
+                </a>
+                <a href="/static/img/house-miro/apartman-kek/floorplan-thumb-960.jpg">
+                    <img loading="lazy" src="/static/img/house-miro/apartman-kek/floorplan.jpg" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            {% set gallerypath="/static/img/house-miro/apartman-kek/gallery/" %}
+            {% set gallerycount=15 %}
+            {% include 'html/tpl/gallery.html' %}
+        </section>
+
+        <h3>MIRO HÁZ - Sárga apartman</h3>
+        <section>
+            <div data-gallery="true" class="intro-and-floor-plan image-gallery">
+                <a href="/static/img/house-miro/apartman-sarga/hero-thumb-960.jpg">
+                    <img loading="lazy" src="/static/img/house-miro/apartman-sarga/hero.jpg" alt="kék apartman">
+                </a>
+                <a href="/static/img/house-miro/apartman-sarga/floorplan-thumb-960.jpg">
+                    <img loading="lazy" src="/static/img/house-miro/apartman-sarga/floorplan.jpg" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            {% set gallerypath="/static/img/house-miro/apartman-sarga/gallery/" %}
+            {% set gallerycount=20 %}
             {% include 'html/tpl/gallery.html' %}
         </section>
     </div>

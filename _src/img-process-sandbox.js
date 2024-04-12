@@ -45,19 +45,32 @@ function consolidateGalleryFileNames(path){
                 consolidateGalleryFileNames(path + "/" + entry.name)
             }
         }
-        // else{
-        //     const _file_path = entry.path + "/" + entry.name 
-        //     const _new_dir_path = entry.path.replace("_DUMP_RESIZE", "_DUMP_RESIZE_2")
-        //     fs.mkdirSync(_new_dir_path, {recursive:true})
-        //     const _new_file_path = _new_dir_path + "/" + entry.name 
-        //     sharp(_file_path)
-        //     .resize(1920, undefined, {withoutEnlargement:true})
-        //     .toFile(_new_file_path)
-        //     //   .then( data => {console.log(data)})
-        //     .catch( err => {console.error(err)});
-        // }
     }
-    
 }
-consolidateGalleryFileNames(CWD + "/static/img")
+// consolidateGalleryFileNames(CWD + "/static/img")
+
+
+function makeThumbnails(path){
+    const entries = fs.readdirSync(path, {withFileTypes:true})
+    for(const entry of entries){
+        if(entry.isDirectory()){
+            makeThumbnails(path + "/" + entry.name)
+        }
+        else{
+            const _file_path = entry.path + "/" + entry.name
+            const split = _file_path.split(".")
+            const extension = split.pop() 
+            const entryPathWithoutExtension = split.join(".") 
+            const _new_file_path = entryPathWithoutExtension + "-thumb-960" + "." + extension 
+            console.log(_new_file_path)
+            // sharp(_file_path)
+            // .resize(960, 540, {withoutEnlargement:true})
+            // .toFile(_new_file_path)
+            // //   .then( data => {console.log(data)})
+            // .catch( err => {console.error(err)});
+        }
+    }
+}
+
+makeThumbnails(CWD + "/static/img")
 

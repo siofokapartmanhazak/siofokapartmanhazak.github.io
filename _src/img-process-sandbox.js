@@ -83,6 +83,7 @@ function makeThumbnails(path){
             makeThumbnails(path + "/" + entry.name)
         }
         else{
+            if(entry.name.includes('thumb')){continue}
             const _file_path = entry.path + "/" + entry.name
             const split = _file_path.split(".")
             const extension = split.pop() 
@@ -90,13 +91,13 @@ function makeThumbnails(path){
             const _new_file_path_L = entryPathWithoutExtension + "-thumb-960" + "." + extension 
             const _new_file_path_S = entryPathWithoutExtension + "-thumb-480" + "." + extension 
             sharp(_file_path)
-            .resize(960, null, {withoutEnlargement:true})
+            .resize({width:960, height:entry.name.includes('floor-plan')?undefined: 960, withoutEnlargement:true})
             .toFile(_new_file_path_L)
             //   .then( data => {console.log(data)})
             .catch( err => {console.error(err)});
-
+            
             sharp(_file_path)
-            .resize(480, null, {withoutEnlargement:true})
+            .resize({width:480, height:entry.name.includes('floor-plan')?undefined: 480, withoutEnlargement:true})
             .toFile(_new_file_path_S)
             //   .then( data => {console.log(data)})
             .catch( err => {console.error(err)});

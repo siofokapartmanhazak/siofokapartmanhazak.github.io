@@ -10,6 +10,10 @@
     object-fit: cover;
 }
 
+.image-gallery .floor-plan-thumb {
+    object-fit: contain;
+}
+
 .image-gallery a {
     display: block;
 }

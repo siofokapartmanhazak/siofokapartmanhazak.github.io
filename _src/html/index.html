@@ -3,8 +3,11 @@
 {% block body %}
 <div class="block-container">
     <section>
+        <div data-gallery="true" class="intro-and-floor-plan image-gallery">
+
         <a href="#dali-house"><img src="/static/img/mozaik-01.jpg" width="940" height="788" alt="ApARTmanházak Siófok"></a>
         <a href="#miro-house"><img src="/static/img/mozaik-02.jpg" width="940" height="788" alt="ApARTmanházak Siófok"></a>
+        </div>
     </section>
 
     <div class="house" id="dali-house">
@@ -36,7 +39,7 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         </section>
         <section>
             {% set gallerypath="/static/img/house-dali/apartman-bezs/gallery/" %}
-            {% set gallerycount=28 %}
+            {% set galleryitems=houses.dali.bezs.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
 
@@ -53,7 +56,7 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         </section>
         <section>
             {% set gallerypath="/static/img/house-dali/apartman-lila/gallery/" %}
-            {% set gallerycount=30 %}
+            {% set galleryitems=houses.dali.lila.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
 
@@ -70,7 +73,7 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         </section>
         <section>
             {% set gallerypath="/static/img/house-dali/apartman-piros/gallery/" %}
-            {% set gallerycount=13 %}
+            {% set galleryitems=houses.dali.piros.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
 
@@ -87,7 +90,7 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         </section>
         <section>
             {% set gallerypath="/static/img/house-dali/apartman-zold/gallery/" %}
-            {% set gallerycount=19 %}
+            {% set galleryitems=houses.dali.zold.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
     </div>
@@ -121,7 +124,7 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         </section>
         <section>
             {% set gallerypath="/static/img/house-miro/apartman-kek/gallery/" %}
-            {% set gallerycount=15 %}
+            {% set galleryitems=houses.miro.kek.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
 
@@ -138,7 +141,7 @@ Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="cli
         </section>
         <section>
             {% set gallerypath="/static/img/house-miro/apartman-sarga/gallery/" %}
-            {% set gallerycount=20 %}
+            {% set galleryitems=houses.miro.sarga.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
     </div>

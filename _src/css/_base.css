@@ -1,7 +1,21 @@
 html, body {
     font-family: sans-serif;
-    /* scroll-padding-top: 8rem; */
+    background-color: white;
+    color: black;
+    line-height: 1.3;
+    font-family:'Lato','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+a, address {
+    color: inherit;
+    font-style: inherit;
+}
+
+h1,h2,h3,h4 {
+    color: var(--color-brand);
+    font-family: 'KaushanScript', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 img {
     display: block;
@@ -14,7 +28,11 @@ section {
     margin: 2rem auto;
 }
 
+.page {
+    margin-top: 7rem;
+}
+
 .block-container {
-    max-width: min(calc(100% - 2rem), 960px);
+    max-width: min(calc(100% - 1rem), 960px);
     margin: 0 auto;
 }

@@ -23,22 +23,24 @@ function htmlHU() {
         .pipe(nunjucksRender({
             path: '.',
             data: {
-                lang: "HU"
+                lang: "HU",
+                houses: houses,
             }
         }))
         // .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(inlinesource())
         .pipe(dest('../'))
         .pipe(livereload())
-}
-
-function htmlEN() {
-    // const data = JSON.parse(fs.readFileSync(__dirname + '/html/data.json'))
-    return src(['html/**/*.html', '!html/tpl/**'])
+    }
+    
+    function htmlEN() {
+        // const data = JSON.parse(fs.readFileSync(__dirname + '/html/data.json'))
+        return src(['html/**/*.html', '!html/tpl/**'])
         .pipe(nunjucksRender({
             path: '.',
             data: {
-                lang: "EN"
+                lang: "EN",
+                houses: houses,
             }
         }))
         // .pipe(htmlmin({ collapseWhitespace: true }))
@@ -89,4 +91,31 @@ exports.js = js;
 exports.static = static;
 exports.build = series(parallel(css, js, static, htmlHU, htmlEN));
 exports.watch = _watch;
+
+
+
+const houses = {
+    miro:{
+        kek:{
+            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14']
+        },
+        sarga:{
+            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19']
+        }
+    },
+    dali:{
+        bezs:{
+            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27']
+        },
+        lila:{
+            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29']
+        },
+        piros:{
+            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12']
+        },
+        zold:{
+            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18']
+        },
+    }
+}
 

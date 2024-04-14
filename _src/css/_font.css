@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Lato";
+    src:
+      url("/static/font/Lato-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Lato";
+    src:
+      url("/static/font/Lato-Black.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "KaushanScript";
+    src:
+      url("/static/font/KaushanScript-Regular.ttf") format("truetype");
+    font-weight: bold;
+}

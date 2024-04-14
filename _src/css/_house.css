@@ -4,14 +4,15 @@
 
 .house h2 {
     text-transform: uppercase;
-    font-weight: lighter;
     font-size: 3rem;
+    margin-top: 4rem;
+    text-align: center;
 }
 
 .house h3 {
     margin-top: 4rem;
-    font-weight: lighter;
     font-size: 2rem;
+    text-align: center;
 }
 
 .house .house-hero-img {
@@ -21,6 +22,7 @@
 }
 
 .house .house-text-01 {
+    color: var(--color-brand);
     margin: 1rem;
     font-size: 1.5rem;
 }

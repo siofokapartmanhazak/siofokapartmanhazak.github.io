@@ -1,6 +1,6 @@
 .house-choose {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(400px, calc(100%-1rem)), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, calc(100% - 1rem)), 1fr));
     gap: 1rem;
     max-width: 100%;
 }
@@ -37,5 +37,13 @@
     color: var(--color-brand);
     margin: 1rem;
     font-family: 'BeachResort', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+.click-here {
+    background-color: var(--color-brand);
+    text-decoration: none;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.3rem;
 }

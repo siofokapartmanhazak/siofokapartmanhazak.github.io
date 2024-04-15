@@ -1,6 +1,7 @@
-@import '_vars';
 @import '_font';
+@import '_vars';
 @import '_base';
+@import '_page-header';
 @import '_header';
 @import '_house';
 @import '_image-gallery';

@@ -8,8 +8,16 @@
 }
 
 .header-address {
+    font-size: 14px;
     padding-left: 0;
 }
+
 .header-address li{
     list-style-type: none;
+}
+
+@media screen and (min-width: 480px) {
+    .header-address {
+        font-size: 1rem;
+    }
 }

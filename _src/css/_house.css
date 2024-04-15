@@ -1,17 +1,29 @@
+.house-choose {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, calc(100%-1rem)), 1fr));
+    gap: 1rem;
+    max-width: 100%;
+}
+.house-choose a {
+    display: block;
+}
+
 .house {
     scroll-margin-top: 8rem;
 }
 
 .house h2 {
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin-top: 4rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
 .house h3 {
-    margin-top: 4rem;
-    font-size: 2rem;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
     text-align: center;
 }
 
@@ -24,5 +36,6 @@
 .house .house-text-01 {
     color: var(--color-brand);
     margin: 1rem;
+    font-family: 'BeachResort', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;
 }

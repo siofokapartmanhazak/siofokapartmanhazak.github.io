@@ -13,7 +13,9 @@ a, address {
 
 h1,h2,h3,h4 {
     color: var(--color-brand);
-    font-family: 'KaushanScript', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.1;
+    font-family: 'BeachResort', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 

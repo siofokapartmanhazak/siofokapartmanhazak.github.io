@@ -13,8 +13,8 @@
 }
 
 @font-face {
-    font-family: "KaushanScript";
+    font-family: "BeachResort";
     src:
-      url("/static/font/KaushanScript-Regular.ttf") format("truetype");
-    font-weight: bold;
+      url("/static/font/beach-resort.ttf") format("truetype");
+    font-weight: normal;
 }

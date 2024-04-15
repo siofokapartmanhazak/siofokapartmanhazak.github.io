@@ -1,0 +1,33 @@
+<nav class="nav-wrap">
+    <input type="checkbox" name="nav-toggle" id="nav-toggle">
+    <label for="nav-toggle">
+        <img class="nav__icon" width="800" height="800" src="/static/img/svg/burger-menu-svgrepo-com.svg" alt="menu icon">
+    </label> 
+        <div class="nav__body">
+            <ul>
+                <li><a href="#miro-house">MIRO HÁZ</a></li>
+                <ul>
+                    <li><a href="#miro-kek">Kék apartman</a></li>
+                    <li><a href="#miro-sarga">Sárga apartman</a></li>
+                </ul>
+                <li><a href="#dali-house">DALI HÁZ</a></li>
+                <ul>
+                    <li><a href="#dali-bezs">Bézs apartman</a></li>
+                    <li><a href="#dali-lila">Lila apartman</a></li>
+                    <li><a href="#dali-piros">Piros apartman</a></li>
+                    <li><a href="#dali-zold">Zöld apartman</a></li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.getElementById('nav-toggle').addEventListener('change', c => {
+            document.querySelector('.nav__body').classList.toggle('open')
+        })
+        Array.from(document.querySelectorAll('.nav__body a')).forEach(a => {
+            a.addEventListener('click', c => {
+                document.querySelector('.nav__body').classList.remove('open')
+            })
+        }) 
+    </script>
+</nav>

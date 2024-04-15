@@ -1,6 +1,7 @@
 .nav-wrap {
     position: relative;
     top: 0.5rem;
+    right: -1rem;
     min-width: 2rem;
 }
 

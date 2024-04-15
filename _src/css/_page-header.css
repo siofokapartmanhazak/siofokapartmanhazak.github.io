@@ -6,14 +6,40 @@
 }
 
 .page-header__container {
-    margin-top: 3rem;
+    margin-top: 2rem;
     margin-bottom: 3rem;
+}
+
+.page-header__container__beach h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.page-header__container__beach {
+    display: flex;
+    align-items: center;
+}
+
+.page-header__container__beach img {
+    display: block;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border-radius: 1rem;
+    max-width: calc(100% - 2rem);
+}
+
+.page-header__container__beach {
+    background-color: aqua;
+    background-image: url("/static/img/misc/beach.jpg");
+    background-position: center;
+    padding: 2rem;
+    min-height: 400px;
 }
 
 .page-header {
     text-align: center;
     font-size: 16px;
-    margin: 4rem auto;
+    margin: 2rem auto;
 }
 
 .page-header__big {

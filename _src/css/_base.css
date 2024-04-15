@@ -22,6 +22,10 @@ h1,h2,h3,h4 {
     font-family: 'BeachResort', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+h3 {
+    font-size: 1.7rem;
+}
+
 
 img {
     display: block;
@@ -32,6 +36,14 @@ img {
 
 section {
     margin: 2rem auto;
+}
+
+.section-header {
+    margin-top: 4rem;
+    font-size: 2.5rem;
+    text-align: center;
+    scroll-margin-top: 8rem;
+
 }
 
 .page {

@@ -43,3 +43,19 @@
     padding: 0.5rem;
     background-color: white;
 }
+
+.nav-toggle .icon-open{
+    display: block;
+}
+
+.nav-toggle .icon-close{
+    display: none;
+}
+
+.nav-toggle.open .icon-open{
+    display: none;
+}
+
+.nav-toggle.open .icon-close{
+    display: block;
+}

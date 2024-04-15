@@ -1,10 +1,12 @@
 <nav class="nav-wrap">
     <input type="checkbox" name="nav-toggle" id="nav-toggle">
-    <label for="nav-toggle">
-        <img class="nav__icon" width="800" height="800" src="/static/img/svg/burger-menu-svgrepo-com.svg" alt="menu icon">
+    <label class="nav-toggle" for="nav-toggle">
+        <img class="nav__icon icon-open" width="800" height="800" src="/static/img/svg/burger-menu-svgrepo-com.svg" alt="menu icon">
+        <img class="nav__icon icon-close nav__icon--close" width="500" height="600" src="/static/img/svg/close-icon.svg" alt="menu icon">
     </label> 
         <div class="nav__body">
             <ul>
+                <li><a href="#home">Bevezető</a></li>
                 <li><a href="#miro-house">MIRO HÁZ</a></li>
                 <ul>
                     <li><a href="#miro-kek">Kék apartman</a></li>
@@ -23,9 +25,11 @@
     <script>
         document.getElementById('nav-toggle').addEventListener('change', c => {
             document.querySelector('.nav__body').classList.toggle('open')
+            document.querySelector('.nav-toggle').classList.toggle('open')
         })
         Array.from(document.querySelectorAll('.nav__body a')).forEach(a => {
             a.addEventListener('click', c => {
+                document.querySelector('.nav-toggle').classList.remove('open')
                 document.querySelector('.nav__body').classList.remove('open')
             })
         }) 

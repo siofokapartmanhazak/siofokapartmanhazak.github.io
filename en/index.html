@@ -35,11 +35,13 @@
         </ul>
         <nav class="nav-wrap">
     <input type="checkbox" name="nav-toggle" id="nav-toggle">
-    <label for="nav-toggle">
-        <img class="nav__icon" width="800" height="800" src="/static/img/svg/burger-menu-svgrepo-com.svg" alt="menu icon">
+    <label class="nav-toggle" for="nav-toggle">
+        <img class="nav__icon icon-open" width="800" height="800" src="/static/img/svg/burger-menu-svgrepo-com.svg" alt="menu icon">
+        <img class="nav__icon icon-close nav__icon--close" width="500" height="600" src="/static/img/svg/close-icon.svg" alt="menu icon">
     </label> 
         <div class="nav__body">
             <ul>
+                <li><a href="#home">Bevezető</a></li>
                 <li><a href="#miro-house">MIRO HÁZ</a></li>
                 <ul>
                     <li><a href="#miro-kek">Kék apartman</a></li>
@@ -58,9 +60,11 @@
     <script>
         document.getElementById('nav-toggle').addEventListener('change', c => {
             document.querySelector('.nav__body').classList.toggle('open')
+            document.querySelector('.nav-toggle').classList.toggle('open')
         })
         Array.from(document.querySelectorAll('.nav__body a')).forEach(a => {
             a.addEventListener('click', c => {
+                document.querySelector('.nav-toggle').classList.remove('open')
                 document.querySelector('.nav__body').classList.remove('open')
             })
         }) 
@@ -71,7 +75,7 @@
         
         <div class="page">
             
-<div class="page-header__container__beach">
+<div id="home" class="page-header__container__beach">
     <img class="page-header__logo" src="/static/img/misc/logo-crop.png" alt="siófoki apARTmanházak az Aranyparton">
 </div>
 <div class="block-container">
@@ -107,7 +111,202 @@
     </div>
 
 
+    
+    <div class="house" id="miro-house">
+        <h2>Miro ház</h2>
+        <img class="house-hero-img" width="960" height="960" src="/static/img/house-miro/exterior-thumb-960.jpg"
+        alt="Miro ház">
+        <div class="house-text-01">150 méterre a szabadstrandtól</div>
+        <p>Üdülőháznak épült, modern épület klasszikus részletekkel ötvözve. Két szintes ház, melyben a két szomszédos,
+            apartman egymás tükörképeként lettek kialakítva, külön bejárattal. Az építész külön ügyellt arra, hogy a
+            vendégek egymást ne zavarják a pihenésben. Továbbá figyelmet fordítottunk a tágas nappalira, ahol a családok
+            kényelmesen étkezhetnek, vagy társasjátékozhatnak, tévézhetnek a síkképernyős okos TV-ken.</p>
+            <ul>
+                <li>parkolás zárt kertben</li>
+            <li>Wifi</li>
+            <li>Kerti sütőgető lehetőség</li>
+            <li>Homokozó a kicsiknek</li>
+            <li>Tágas apartmanok</li>
+            <li>Apartmanok már 35000- forint / éjszakától</li>
+        </ul>
 
+        Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here"
+        href="mailto:apartmanhazaksiofok@gmail.com">Kattintson ide</a>
+        
+        <h3 id="miro-kek">MIRO HÁZ <br> Kék apartman</h3>
+        <section>
+            <div data-gallery="true" class="intro-and-floor-plan image-gallery">
+                <a href="/static/img/house-miro/apartman-kek/hero.jpg">
+                    <img width="960" height="960" loading="lazy" width="960" height="960"
+                    src="/static/img/house-miro/apartman-kek/hero-thumb-960.jpg" alt="kék apartman">
+                </a>
+                <a href="/static/img/house-miro/apartman-kek/floor-plan.jpg">
+                    <img loading="lazy" src="/static/img/house-miro/apartman-kek/floor-plan-thumb-960.jpg"
+                    class="floor-plan-thumb" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            
+            
+            <div data-gallery="true" class="image-gallery">
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/01.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/01-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/02.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/02-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/03.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/03-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/04.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/04-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/05.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/05-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/06.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/06-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/07.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/07-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/08.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/08-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/09.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/09-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/10.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/10-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/11.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/11-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/12.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/12-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/13.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/13-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-kek/gallery/14.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/14-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+</div>
+        </section>
+        
+        <h3 id="miro-sarga">MIRO HÁZ <br> Sárga apartman</h3>
+        <section>
+            <div data-gallery="true" class="intro-and-floor-plan image-gallery">
+                <a href="/static/img/house-miro/apartman-sarga/hero.jpg">
+                    <img width="960" height="960" loading="lazy"
+                        src="/static/img/house-miro/apartman-sarga/hero-thumb-960.jpg" alt="kék apartman">
+                </a>
+                <a href="/static/img/house-miro/apartman-sarga/floor-plan.jpg">
+                    <img loading="lazy" src="/static/img/house-miro/apartman-sarga/floor-plan-thumb-960.jpg"
+                        class="floor-plan-thumb" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            
+            
+            <div data-gallery="true" class="image-gallery">
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/01.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/01-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/02.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/02-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/03.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/03-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/04.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/04-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/05.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/05-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/06.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/06-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/07.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/07-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/08.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/08-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/09.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/09-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/10.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/10-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/11.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/11-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/12.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/12-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/13.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/13-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/14.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/14-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/15.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/15-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/16.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/16-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/17.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/17-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/18.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/18-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+    <a href="/static/img/house-miro/apartman-sarga/gallery/19.jpg">
+        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/19-thumb-960.jpg" alt="kép galéria">
+    </a>
+    
+</div>
+        </section>
+    </div>
     <div class="house" id="dali-house">
         <h2>Dali ház</h2>
         <img class="house-hero-img" src="/static/img/house-dali/exterior-thumb-960.jpg" alt="Dali ház">
@@ -126,10 +325,10 @@
             <li>Terasz illetve erkélyek minden apartmanhoz</li>
             <li>Apartmanok már 30000,- forint / éjszakától</li>
         </ul>
-
+    
         Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here"
             href="mailto:apartmanhazaksiofok@gmail.com">Kattintson ide</a>
-
+    
         <h3 id="dali-bezs">DALI HÁZ<br>bézs apartman</h3>
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
@@ -258,7 +457,7 @@
     
 </div>
         </section>
-
+    
         <h3 id="dali-lila">DALI HÁZ <br> Lila apartman</h3>
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
@@ -395,7 +594,7 @@
     
 </div>
         </section>
-
+    
         <h3 id="dali-piros">DALI HÁZ <br> Piros apartman</h3>
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
@@ -464,7 +663,7 @@
     
 </div>
         </section>
-
+    
         <h3 id="dali-zold">DALI HÁZ <br> Zöld apartman</h3>
         <section>
             <div data-gallery="true" class="intro-and-floor-plan image-gallery">
@@ -553,202 +752,6 @@
     
     <a href="/static/img/house-dali/apartman-zold/gallery/18.jpg">
         <img loading="lazy"  width="960" height="960"  src="/static/img/house-dali/apartman-zold/gallery/18-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-</div>
-        </section>
-    </div>
-
-    <div class="house" id="miro-house">
-        <h2>Miro ház</h2>
-        <img class="house-hero-img" width="960" height="960" src="/static/img/house-miro/exterior-thumb-960.jpg"
-            alt="Miro ház">
-        <div class="house-text-01">150 méterre a szabadstrandtól</div>
-        <p>Üdülőháznak épült, modern épület klasszikus részletekkel ötvözve. Két szintes ház, melyben a két szomszédos,
-            apartman egymás tükörképeként lettek kialakítva, külön bejárattal. Az építész külön ügyellt arra, hogy a
-            vendégek egymást ne zavarják a pihenésben. Továbbá figyelmet fordítottunk a tágas nappalira, ahol a családok
-            kényelmesen étkezhetnek, vagy társasjátékozhatnak, tévézhetnek a síkképernyős okos TV-ken.</p>
-        <ul>
-            <li>parkolás zárt kertben</li>
-            <li>Wifi</li>
-            <li>Kerti sütőgető lehetőség</li>
-            <li>Homokozó a kicsiknek</li>
-            <li>Tágas apartmanok</li>
-            <li>Apartmanok már 35000- forint / éjszakától</li>
-        </ul>
-
-        Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here"
-            href="mailto:apartmanhazaksiofok@gmail.com">Kattintson ide</a>
-
-        <h3 id="miro-kek">MIRO HÁZ <br> Kék apartman</h3>
-        <section>
-            <div data-gallery="true" class="intro-and-floor-plan image-gallery">
-                <a href="/static/img/house-miro/apartman-kek/hero.jpg">
-                    <img width="960" height="960" loading="lazy" width="960" height="960"
-                        src="/static/img/house-miro/apartman-kek/hero-thumb-960.jpg" alt="kék apartman">
-                </a>
-                <a href="/static/img/house-miro/apartman-kek/floor-plan.jpg">
-                    <img loading="lazy" src="/static/img/house-miro/apartman-kek/floor-plan-thumb-960.jpg"
-                        class="floor-plan-thumb" alt="alaprajz">
-                </a>
-            </div>
-        </section>
-        <section>
-            
-            
-            <div data-gallery="true" class="image-gallery">
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/01.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/01-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/02.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/02-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/03.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/03-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/04.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/04-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/05.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/05-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/06.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/06-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/07.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/07-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/08.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/08-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/09.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/09-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/10.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/10-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/11.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/11-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/12.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/12-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/13.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/13-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-kek/gallery/14.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-kek/gallery/14-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-</div>
-        </section>
-
-        <h3 id="miro-sarga">MIRO HÁZ <br> Sárga apartman</h3>
-        <section>
-            <div data-gallery="true" class="intro-and-floor-plan image-gallery">
-                <a href="/static/img/house-miro/apartman-sarga/hero.jpg">
-                    <img width="960" height="960" loading="lazy"
-                        src="/static/img/house-miro/apartman-sarga/hero-thumb-960.jpg" alt="kék apartman">
-                </a>
-                <a href="/static/img/house-miro/apartman-sarga/floor-plan.jpg">
-                    <img loading="lazy" src="/static/img/house-miro/apartman-sarga/floor-plan-thumb-960.jpg"
-                        class="floor-plan-thumb" alt="alaprajz">
-                </a>
-            </div>
-        </section>
-        <section>
-            
-            
-            <div data-gallery="true" class="image-gallery">
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/01.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/01-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/02.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/02-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/03.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/03-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/04.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/04-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/05.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/05-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/06.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/06-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/07.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/07-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/08.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/08-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/09.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/09-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/10.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/10-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/11.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/11-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/12.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/12-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/13.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/13-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/14.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/14-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/15.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/15-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/16.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/16-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/17.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/17-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/18.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/18-thumb-960.jpg" alt="kép galéria">
-    </a>
-    
-    <a href="/static/img/house-miro/apartman-sarga/gallery/19.jpg">
-        <img loading="lazy"  width="960" height="960"  src="/static/img/house-miro/apartman-sarga/gallery/19-thumb-960.jpg" alt="kép galéria">
     </a>
     
 </div>

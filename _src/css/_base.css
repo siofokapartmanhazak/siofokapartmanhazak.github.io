@@ -53,3 +53,11 @@ section {
     max-width: min(calc(100% - 2rem), 960px);
     margin: 0 auto;
 }
+
+.csaladi {
+    font-family:'OpenSans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-top: 10rem;
+    text-align: center  ;
+}

@@ -60,6 +60,9 @@
 
 .page-header__big {
     font-size: 1.5em;
+    font-family:'OpenSans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
 }
 
 @media screen and (min-width: 480px) {

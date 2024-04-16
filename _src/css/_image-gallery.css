@@ -1,8 +1,14 @@
 .image-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: minmax(30px, auto);
-    gap: 1rem;
+    gap: 0.5rem;
+}
+@media screen and (min-width:800px) {
+    .image-gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }   
 }
 
 .image-gallery img {

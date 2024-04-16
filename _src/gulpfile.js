@@ -7,9 +7,17 @@ const nunjucksRender = require('gulp-nunjucks-render');
 const fs = require('fs')
 const htmlmin = require('gulp-htmlmin')
 livereload = require('gulp-livereload')
+const gitVersion = require('@corteks/gitversion').default
 
-const VERSION = "19"
-
+function ver(){
+    return gitVersion()
+        .then((informations) => {
+            return informations.CURRENT_COMMIT_SHORT_ID
+        })
+        .catch((err) => {
+            throw new Error('gitver!!!')
+        })
+}
 
 const inlinesource = require('gulp-inline-source');
 
@@ -19,13 +27,13 @@ function static() {
         .pipe(livereload())
 }
 
-function htmlHU() {
+async function htmlHU() {
     // const data = JSON.parse(fs.readFileSync(__dirname + '/html/data.json'))
     return src(['html/**/*.html', '!html/tpl/**'])
         .pipe(nunjucksRender({
             path: '.',
             data: {
-                version: VERSION,
+                version: await ver(),
                 lang: "HU",
                 houses: houses,
             }
@@ -34,15 +42,15 @@ function htmlHU() {
         .pipe(inlinesource())
         .pipe(dest('../'))
         .pipe(livereload())
-    }
-    
-    function htmlEN() {
-        // const data = JSON.parse(fs.readFileSync(__dirname + '/html/data.json'))
-        return src(['html/**/*.html', '!html/tpl/**'])
+}
+
+async function htmlEN() {
+    // const data = JSON.parse(fs.readFileSync(__dirname + '/html/data.json'))
+    return src(['html/**/*.html', '!html/tpl/**'])
         .pipe(nunjucksRender({
             path: '.',
             data: {
-                version: VERSION,
+                version: await ver(),
                 lang: "EN",
                 houses: houses,
             }
@@ -99,26 +107,26 @@ exports.watch = _watch;
 
 
 const houses = {
-    miro:{
-        kek:{
-            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14']
+    miro: {
+        kek: {
+            gallery: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14']
         },
-        sarga:{
-            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19']
+        sarga: {
+            gallery: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19']
         }
     },
-    dali:{
-        bezs:{
-            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27']
+    dali: {
+        bezs: {
+            gallery: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27']
         },
-        lila:{
-            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29']
+        lila: {
+            gallery: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29']
         },
-        piros:{
-            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12']
+        piros: {
+            gallery: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
         },
-        zold:{
-            gallery: ['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18']
+        zold: {
+            gallery: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18']
         },
     }
 }

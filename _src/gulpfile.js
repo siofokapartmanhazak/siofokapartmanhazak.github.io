@@ -8,6 +8,8 @@ const fs = require('fs')
 const htmlmin = require('gulp-htmlmin')
 livereload = require('gulp-livereload')
 
+const VERSION = "10"
+
 
 const inlinesource = require('gulp-inline-source');
 
@@ -23,6 +25,7 @@ function htmlHU() {
         .pipe(nunjucksRender({
             path: '.',
             data: {
+                version: VERSION,
                 lang: "HU",
                 houses: houses,
             }
@@ -39,6 +42,7 @@ function htmlHU() {
         .pipe(nunjucksRender({
             path: '.',
             data: {
+                version: VERSION,
                 lang: "EN",
                 houses: houses,
             }

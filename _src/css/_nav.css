@@ -1,6 +1,5 @@
 .nav-wrap {
     position: relative;
-    top: 0.5rem;
     right: -1rem;
     min-width: 2rem;
 }
@@ -23,7 +22,7 @@
 }
 
 .nav__body a {
-    line-height: 2;
+    line-height: 1.8;
     text-wrap: nowrap;
     text-decoration: none;
 }

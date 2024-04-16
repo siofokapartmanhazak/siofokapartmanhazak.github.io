@@ -45,7 +45,7 @@
 }
 
 .page-header__container__beach {
-    background-color: aqua;
+    background-color: black;
     background-image: url("/static/img/misc/beach.jpg");
     background-position: center;
     padding: 2rem;

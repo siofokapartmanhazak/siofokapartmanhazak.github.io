@@ -8,7 +8,7 @@ const fs = require('fs')
 const htmlmin = require('gulp-htmlmin')
 livereload = require('gulp-livereload')
 
-const VERSION = "11"
+const VERSION = "12"
 
 
 const inlinesource = require('gulp-inline-source');

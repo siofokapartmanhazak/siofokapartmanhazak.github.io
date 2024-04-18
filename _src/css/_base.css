@@ -60,3 +60,34 @@ section {
     font-size: 1.5rem;
     text-align: center  ;
 }
+
+.image-view {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    background-color: black;
+    z-index: 100;
+}
+.image-view.open {
+    display: block;
+}
+
+.image-view__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.image-view__close-icon {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    top:1rem;
+    right:1rem;
+    padding:0.7rem;
+}

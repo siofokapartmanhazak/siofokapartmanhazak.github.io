@@ -940,6 +940,29 @@
     </p>
 
 </div>
+<div id="image-view" class="image-view">
+    <img class="image-view__image" src="" alt="">
+    <img class="image-view__close-icon" src="/static/img/svg/close-icon.svg" alt="close">
+</div>
+<script>
+    (()=>{
+        const img = document.querySelector(".image-view__image")
+        const galleries = Array.from(document.querySelectorAll('.image-gallery'))
+        galleries.forEach(g => {
+            Array.from(g.querySelectorAll('a')).forEach(a => {
+                a.addEventListener('click', e => {
+                    e.preventDefault()
+                    document.getElementById("image-view").classList.add("open")
+                    img.setAttribute("src", a.getAttribute("href"))
+                })
+            })
+        })
+        document.querySelector(".image-view__close-icon").addEventListener('click', ()=>{
+            document.getElementById("image-view").classList.remove("open")
+
+        })
+    })()
+</script>
 
         </div>
         <div class="block-container">.</div>

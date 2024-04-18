@@ -1,11 +1,16 @@
 
 .page-header__logo {
     margin: 0 auto;
-    max-width: 250px;
+    width: 150px;
+    height: 150px;
     object-fit: contain;
     padding: 1rem;
     background-color: white;
     border-radius: 100%;
+    position: absolute;
+    top:-2rem;
+    left:50%;
+    transform: translateX(-50%);
 }
 .page-header__small-logo-wrap {
     display: none;
@@ -28,6 +33,7 @@
 }
 
 .page-header__container {
+    position: relative;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
@@ -40,6 +46,7 @@
 .page-header__container__beach {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .page-header__container__beach {

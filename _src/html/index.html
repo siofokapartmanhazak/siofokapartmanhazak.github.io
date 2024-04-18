@@ -2,19 +2,29 @@
 
 {% block body %}
 <div class="block-container">
-<h1 class="csaladi">Családi, baráti vakáció gyönyörű környezetben</h1>
-<div class="page-header__big">siófoki apARTmanházak az Aranyparton</div>
+
 </div>
 <div id="home" class="page-header__container__beach">
+    <img class="page-header__logo" src="/static/img/misc/logo-crop.png" alt="siófoki apARTmanházak az Aranyparton">
 </div>
-<img class="page-header__logo" src="/static/img/misc/logo-crop.png" alt="siófoki apARTmanházak az Aranyparton">
 <div class="block-container">
+    <h1 class="csaladi">Családi, baráti vakáció gyönyörű környezetben</h1>
+<div id="book" class="page-header__big">siófoki apARTmanházak az Aranyparton</div>
     <div class="page-header__container">
-        <p>Két tágas apartmanházunk Keddtől keddig tartó turnusaival várja Önt és családját, barátait Siófokon, a
-            Balaton déli partjának nyüzsgő fővárosában, mégis nyugodt, csendes környezetben, mindössze pár lépésre
-            Balatontól.</p>
+        <p>
+            Két tágas apartmanházunk hétfői érkezéssel várja Önt és családját, barátait Siófokon, a Balaton déli partjának nyüzsgő fővárosában, mégis nyugodt, csendes környezetben, mindössze pár lépésre Balatontól.
+            </p>
         <div><a class="click-here" href="#miro-house">Miro</a> és a <a class="click-here" href="#dali-house">Dali</a>
             házaink apartmanjaiban minden adott a tökéletes nyaraláshoz.</div>
+            <div id="appartman-embed-iframe-wrapper">
+                <iframe
+                    id="appartman-embed-iframe"
+                    src="https://foglalas.appartman.hu/siofok/embed"
+                    width="100%"
+                    scrolling="yes"
+                ></iframe>
+            </div>
+            <script src="https://foglalas.appartman.hu/embed-script-min.js"></script>
         <section>
             <div class="house-choose">
                 <a href="#miro-house"><img src="/static/img/miro-mozaik2.jpg" width="940" height="788"
@@ -57,7 +67,7 @@
         </ul>
 
         Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here"
-        href="mailto:apartmanhazaksiofok@gmail.com">Kattintson ide</a>
+        href="#book">Kattintson ide</a>
         
         <h3 id="miro-kek">MIRO HÁZ <br> Kék apartman <br> <span class="apartman-type">két hálószobás</span></h3>
         <section>
@@ -113,9 +123,9 @@
         </ul>
     
         Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here"
-            href="mailto:apartmanhazaksiofok@gmail.com">Kattintson ide</a>
+            href="#book">Kattintson ide</a>
     
-        <h3 id="dali-bezs">DALI HÁZ<br>bézs apartman<br><span class="apartman-type">három hálószobás</span></h3>
+        <h3 id="dali-bezs">DALI HÁZ<br>Bézs apartman<br><span class="apartman-type">három hálószobás</span></h3>
         <section>
             <img width="1920" height="1080" loading="lazy" src="/static/img/house-dali/apartman-bezs/hero.jpg"> 
             <div class="intro-and-floor-plan">
@@ -188,11 +198,11 @@
     <h2 class="section-header" id="neighborhood">Környék és programok</h2>
     <ul>
         <li>Buszmegálló az épületektől 50 méterre található</li>
-        <li>Kis közért 100m, 3-5 perc sétára található</li>
+        <li>Kis közért 100 méter, 3-5 perc sétára található</li>
         <li>A vasút állomás 15 perc sétára található</li>
-        <li>Szabadstrand 150-200mre található, ahol rengeteg étkezési lehetőség van.</li>
+        <li>Szabadstrand 150-200 méterre található, ahol rengeteg étkezési lehetőség van.</li>
         <li>Bella Állatpark 2,7km</li>
-        <li>Bebo Aquapark 300m</li>
+        <li>Bebo Aquapark 300 méter</li>
 
     </ul>
 </div>
@@ -202,9 +212,9 @@
     <p>Áraink az általános forgalmi adót tartalmazzák. 18 év feletti vendégek számára az IFA (idegenforgalmi adó) külön fizetendő, melynek mértéke egész évben 550 Ft/fő/éj.</p>
     <h3>Foglalási feltételek</h3>
     <ul>
-        <li>Június 1. és augusztus 31. között apartmanjaink csak minimum7 éjszakás időszakra foglalhatóak.</li>
-        <li>Keddtől keddig tartó turnusokban várjuk vendégeinket. Talán szokatlan a turnusváltás időpontja, de úgy gondoljuk, hogy vendégeink számára egy nyugodtabb nyaralást tudunk ajánlani. A hétvégekre nehezedő, a déli tengerekhez és a Balatonhoz irányuló megnövekedett forgalom és abból kialakuló dugók miatt, esett a választásunk a keddi turnusváltásra, evvel elkerülve a bosszantó érkezési és indulási bosszúságot.</li>
-        <li>Foglalás esetén 5 éjszaka árát előlegként, kérjük, befizetni a foglalást követő 3 napon belül, különben a foglálast nem tudjuk biztosítani. </li>
+        <li>Június 1. és augusztus 31. között apartmanjaink csak minimum 6 éjszakás időszakra foglalhatóak.</li>
+        <li>Érkezés minden héten hétfőn lehetséges.</li>
+        <li>Távozás minden héten vasárnap illetve hétfőn lehetséges.  (Talán szokatlan a turnusváltás időpontja, de úgy gondoljuk, hogy vendégeink számára egy nyugodtabb nyaralást tudunk ajánlani. A hétvégekre nehezedő, a déli tengerekhez és a Balatonhoz irányuló megnövekedett forgalom és abból kialakuló dugók miatt, esett a választásunk a keddi turnusváltásra, evvel elkerülve a bosszantó érkezési és indulási bosszúságot.)</li>
         <li>A teljes ház foglalása esetén kérje egyedi ajánlatunkat.</li>
     </ul>
     <h3>Érkezés és távozás</h3>
@@ -235,6 +245,7 @@
     Dali Apartmanház: 8600 Siófok, Szent László utca 150.<br>
     email: <a href="mailto:apartmanhazaksiofok@gmail.com">apartmanhazaksiofok@gmail.com</a><br>
     Mobil: <a href="tel:+36705401107">+36705401107</a><br>
+    <a href="https://www.facebook.com/apartmanhazakMiroesDali">facebook</a><br>
     <br>
     NTKA szám: EG19023010<br>
     <br>

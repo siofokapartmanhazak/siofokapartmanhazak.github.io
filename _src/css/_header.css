@@ -5,6 +5,7 @@
     right:0;
     padding: 0.5rem 1rem;
     background-color: white;
+    z-index: 10;
 }
 
 .header-address {

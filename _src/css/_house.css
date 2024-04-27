@@ -33,6 +33,23 @@
     object-fit: cover;
 }
 
+
+@media screen and (min-width:720px) {
+    .house .house-hero-img {
+        width: 90%;
+        max-height: 70lvh;
+        object-fit: contain;
+        margin: auto;
+    }    
+    .room-hero {
+        width: 90%;
+        max-height: 70lvh;
+        object-fit: contain;
+        margin: auto;
+    }
+
+}
+
 .house .apartman-type {
     font-family: 'OpenSans','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.5rem;

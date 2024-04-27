@@ -10,6 +10,18 @@ html, body {
 
 }
 
+a.book-online-big {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1rem auto;
+}
+
+.center {
+    text-align: center;
+}
+
 a, address {
     color: inherit;
     font-style: inherit;

@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "start": "gulp watch",
+        "start": "gulp build && gulp watch",
         "build": "gulp build",
         "dbuild": "gulp dbuild",
         "clean": "gulp clean"

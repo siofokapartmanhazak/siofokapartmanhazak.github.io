@@ -94,6 +94,41 @@
             {% set galleryitems=houses.miro.barna.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>
+
+        <h3 id="miro-szurke">MIRO HÁZ <br> Szürke apartman <br> <span class="apartman-type">két hálószobás</span></h3>
+        <section>
+            <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-szurke/hero.jpg"> 
+            <div class="intro-and-floor-plan">
+                {% include 'html/tpl/apartman/miro-szurke.html' %}
+                <a href="/static/img/house-miro/apartman-szurke/floor-plan.png">
+                    <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-szurke/floor-plan-thumb-960.png"
+                    class="floor-plan-thumb" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            {% set gallerypath="/static/img/house-miro/apartman-szurke/gallery/" %}
+            {% set galleryitems=houses.miro.szurke.gallery %}
+            {% include 'html/tpl/gallery.html' %}
+        </section>
+
+        <h3 id="miro-kek">MIRO HÁZ <br> Kék apartman <br> <span class="apartman-type">két hálószobás</span></h3>
+        <section>
+            <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-kek/hero.jpg"> 
+            <div class="intro-and-floor-plan">
+                {% include 'html/tpl/apartman/miro-kek.html' %}
+                <a href="/static/img/house-miro/apartman-kek/floor-plan.jpg">
+                    <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-kek/floor-plan-thumb-960.jpg"
+                    class="floor-plan-thumb" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            {% set gallerypath="/static/img/house-miro/apartman-kek/gallery/" %}
+            {% set galleryitems=houses.miro.kek.gallery %}
+            {% include 'html/tpl/gallery.html' %}
+        </section>
+
     </div>
     <div class="house" id="dali-house">
         <h2>Dali ház</h2>

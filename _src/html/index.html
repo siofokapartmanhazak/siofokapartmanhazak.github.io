@@ -61,24 +61,7 @@
         Hosszú és rövidtávú foglaláshoz lépjen kapcsolatba velünk! <a class="click-here"
         href="https://booking.godirect.website/siofok" target="_blank">Kattintson ide</a>
         
-        <h3 id="miro-kek">MIRO HÁZ <br> Kék apartman <br> <span class="apartman-type">két hálószobás</span></h3>
-        <section>
-            <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-kek/hero.jpg"> 
-            <div class="intro-and-floor-plan">
-                {% include 'html/tpl/apartman/miro-kek.html' %}
-                <a href="/static/img/house-miro/apartman-kek/floor-plan.jpg">
-                    <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-kek/floor-plan-thumb-960.jpg"
-                    class="floor-plan-thumb" alt="alaprajz">
-                </a>
-            </div>
-        </section>
-        <section>
-            {% set gallerypath="/static/img/house-miro/apartman-kek/gallery/" %}
-            {% set galleryitems=houses.miro.kek.gallery %}
-            {% include 'html/tpl/gallery.html' %}
-        </section>
-        
-        <h3 id="miro-sarga">MIRO HÁZ <br> Sárga apartman <br> <span class="apartman-type">két hálószobás</span></h3>
+        <h3 id="miro-sarga">MIRO HÁZ <br>Sárga apartman <br> <span class="apartman-type">két hálószobás</span></h3>
         <section>
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-sarga/hero.jpg"> 
             <div class="intro-and-floor-plan">
@@ -91,6 +74,23 @@
         </section>
         <section>
             {% set gallerypath="/static/img/house-miro/apartman-sarga/gallery/" %}
+            {% set galleryitems=houses.miro.kek.gallery %}
+            {% include 'html/tpl/gallery.html' %}
+        </section>
+        
+        <h3 id="miro-barna">MIRO HÁZ <br> Barna apartman <br> <span class="apartman-type">két hálószobás</span></h3>
+        <section>
+            <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-barna/hero.jpg"> 
+            <div class="intro-and-floor-plan">
+                {% include 'html/tpl/apartman/miro-barna.html' %}
+                <a href="/static/img/house-miro/apartman-barna/floor-plan.jpg">
+                    <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-barna/floor-plan-thumb-960.jpg"
+                    class="floor-plan-thumb" alt="alaprajz">
+                </a>
+            </div>
+        </section>
+        <section>
+            {% set gallerypath="/static/img/house-miro/apartman-barna/gallery/" %}
             {% set galleryitems=houses.miro.sarga.gallery %}
             {% include 'html/tpl/gallery.html' %}
         </section>

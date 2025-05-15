@@ -11,9 +11,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@corteks/gitversion": "^0.3.4"
     },
     "devDependencies": {
+        "@corteks/gitversion": "^0.3.4",
         "autoprefixer": "^9.6.1",
         "del": "^5.1.0",
         "fs-extra": "^11.2.0",

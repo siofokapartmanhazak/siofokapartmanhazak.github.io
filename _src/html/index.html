@@ -66,7 +66,7 @@
             <img width="1920" height="1768" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-sarga/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/miro-sarga.html' %}
-                <a href="/static/img/house-miro/apartman-sarga/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-miro/apartman-sarga/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-sarga/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -83,7 +83,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-barna/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/miro-barna.html' %}
-                <a href="/static/img/house-miro/apartman-barna/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-miro/apartman-barna/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-barna/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -100,7 +100,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-szurke/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/miro-szurke.html' %}
-                <a href="/static/img/house-miro/apartman-szurke/floor-plan.png">
+                <a data-floorplan href="/static/img/house-miro/apartman-szurke/floor-plan.png">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-szurke/floor-plan-thumb-960.png"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -117,7 +117,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-miro/apartman-kek/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/miro-kek.html' %}
-                <a href="/static/img/house-miro/apartman-kek/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-miro/apartman-kek/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-miro/apartman-kek/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -157,7 +157,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-dali/apartman-bezs/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/dali-bezs.html' %}
-                <a href="/static/img/house-dali/apartman-bezs/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-dali/apartman-bezs/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-dali/apartman-bezs/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -174,7 +174,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-dali/apartman-lila/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/dali-lila.html' %}
-                <a href="/static/img/house-dali/apartman-lila/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-dali/apartman-lila/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-dali/apartman-lila/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -191,7 +191,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-dali/apartman-piros/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/dali-piros.html' %}
-                <a href="/static/img/house-dali/apartman-piros/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-dali/apartman-piros/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-dali/apartman-piros/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -208,7 +208,7 @@
             <img width="1920" height="1080" loading="lazy" class="room-hero" src="/static/img/house-dali/apartman-zold/hero.jpg"> 
             <div class="intro-and-floor-plan">
                 {% include 'html/tpl/apartman/dali-zold.html' %}
-                <a href="/static/img/house-dali/apartman-zold/floor-plan.jpg">
+                <a data-floorplan href="/static/img/house-dali/apartman-zold/floor-plan.jpg">
                     <img loading="lazy" width="960" height="751" src="/static/img/house-dali/apartman-zold/floor-plan-thumb-960.jpg"
                     class="floor-plan-thumb" alt="alaprajz">
                 </a>
@@ -301,19 +301,22 @@
 </div>
 <script>
     (()=>{
-        const img = document.querySelector(".image-view__image")
+        const imageViewModal = document.getElementById("image-view")
+        const imageViewModalImage = document.querySelector(".image-view__image")
+        const showImageOfATag = a =>{
+            a.addEventListener('click', e => {
+                e.preventDefault()
+                imageViewModal.classList.add("open")
+                imageViewModalImage.setAttribute("src", a.getAttribute("href"))
+            })
+        }
+        Array.from(document.querySelectorAll('[data-floorplan]')).forEach(showImageOfATag)
         const galleries = Array.from(document.querySelectorAll('.image-gallery'))
         galleries.forEach(g => {
-            Array.from(g.querySelectorAll('a')).forEach(a => {
-                a.addEventListener('click', e => {
-                    e.preventDefault()
-                    document.getElementById("image-view").classList.add("open")
-                    img.setAttribute("src", a.getAttribute("href"))
-                })
-            })
+            Array.from(g.querySelectorAll('a')).forEach(showImageOfATag)
         })
         document.querySelector(".image-view__close-icon").addEventListener('click', ()=>{
-            document.getElementById("image-view").classList.remove("open")
+            imageViewModal.classList.remove("open")
 
         })
     })()
